@@ -1,0 +1,36 @@
+# ambiente virtual
+.venv/
+
+# cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# variáveis de ambiente (não versionar credenciais)
+.env
+.env.*
+!.env.example
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# build / distribuição
+dist/
+build/
+*.egg-info/
+
+# pytest / cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+
+# sistemas operacionais
+.DS_Store
+Thumbs.db
