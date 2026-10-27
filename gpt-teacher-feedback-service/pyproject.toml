@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.141.1",
     "gpt-teacher-db",
+    "langchain-groq>=1.1.3",
     "psycopg[binary]>=3.3.6",
     "pydantic-settings>=2.15.0",
     "python-dotenv>=1.2.3",
@@ -16,3 +17,8 @@ dependencies = [
 
 [tool.uv.sources]
 gpt-teacher-db = { path = "../../../gpt-teacher-db/gpt-teacher-db", editable = true }
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

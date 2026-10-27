@@ -8,6 +8,16 @@ class Settings(BaseSettings):
     POSTGRES_PASSWORD: str
     POSTGRES_DB: str
 
+    # Autenticacao servico-a-servico (header X-Internal-API-Key)
+    INTERNAL_API_KEY: str = "change-me-in-production"
+
+    # Limiares dos indicadores (todos configuráveis via .env)
+    ABANDON_MINUTES: int = 30
+    STUCK_MESSAGES: int = 5
+    STUCK_SIMILARITY_RATIO: float = 0.7
+
+    GROQ_API_KEY: str = ""
+
     @property
     def DATABASE_URI(self) -> str:
         return (
